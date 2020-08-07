@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dSc-nm-apo" id="7lA-qJ-5l4">
-                                    <rect key="frame" x="0.0" y="0.0" width="382.5" height="86"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="86"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTm-zK-fPP">
@@ -190,11 +190,27 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m99-yj-HSc" customClass="QBCheckmarkView">
                                                     <rect key="frame" x="49.5" y="49.5" width="24" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiD-gs-nfe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="24" id="8Dq-6v-oj1"/>
+                                                        <constraint firstItem="IiD-gs-nfe" firstAttribute="top" secondItem="m99-yj-HSc" secondAttribute="top" id="QNG-TK-8s1"/>
                                                         <constraint firstAttribute="height" constant="24" id="bBP-zT-euh"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IiD-gs-nfe" secondAttribute="trailing" id="hMz-Bx-ixq"/>
+                                                        <constraint firstItem="IiD-gs-nfe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m99-yj-HSc" secondAttribute="leading" id="oQc-IZ-NaB"/>
+                                                        <constraint firstAttribute="bottom" secondItem="IiD-gs-nfe" secondAttribute="bottom" id="p1v-FJ-3tN"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <outlet property="label" destination="IiD-gs-nfe" id="uSn-Ik-CS3"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
@@ -265,7 +281,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qBb-2Q-SxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="852"/>
+            <point key="canvasLocation" x="1813.0434782608697" y="851.78571428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TBV-v4-1AQ">

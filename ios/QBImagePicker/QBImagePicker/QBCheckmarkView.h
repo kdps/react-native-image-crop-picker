@@ -18,4 +18,6 @@ IB_DESIGNABLE
 @property (nonatomic, strong) IBInspectable UIColor *bodyColor;
 @property (nonatomic, strong) IBInspectable UIColor *checkmarkColor;
 
+@property (retain, nonatomic) IBOutlet UILabel *label;
+
 @end

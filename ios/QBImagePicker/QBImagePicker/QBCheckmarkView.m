@@ -14,6 +14,8 @@
 {
     [super awakeFromNib];
     
+    [self.label setText:@"0"];
+    
     // Set default values
     self.borderWidth = 1.0;
     self.checkmarkLineWidth = 1.2;
