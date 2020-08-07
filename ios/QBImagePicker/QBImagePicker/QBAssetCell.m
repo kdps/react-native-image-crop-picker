@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *overlayView;
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end
 
 @implementation QBAssetCell
