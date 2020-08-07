@@ -514,10 +514,11 @@ static int labelIndex = 0;
         
         /* Checkbox related function */
         
-        
         labelIndex += 1;
-        [cell ]
+        NSString * labelText = [NSString alloc];
+        labelText = [NSString stringWithFormat:@"%s", labelIndex];
         
+        [cell setLabelText:labelText];
         
         /* Checkbox realted function */
         

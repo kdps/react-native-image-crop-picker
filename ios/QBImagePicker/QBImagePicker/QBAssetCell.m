@@ -16,7 +16,7 @@
 
 @implementation QBAssetCell
 
-- (void)setLabelText:(*NSString)title
+- (void)setLabelText:(NSString * )title
 {
     // Set text of checkbox
     [self.label setText:title];

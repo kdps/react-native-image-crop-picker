@@ -12,6 +12,8 @@
 
 @interface QBAssetCell : UICollectionViewCell
 
+- (void)setLabelText:(NSString * )title;
+
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet QBVideoIndicatorView *videoIndicatorView;
 
