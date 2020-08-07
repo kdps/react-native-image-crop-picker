@@ -16,6 +16,12 @@
 
 @implementation QBAssetCell
 
+- (void)setLabelText:(*NSString)title
+{
+    // Set text of checkbox
+    [self.label setText:title];
+}
+
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];

@@ -18,6 +18,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     return CGSizeMake(size.width * scale, size.height * scale);
 }
 
+static int labelIndex = 0;
+
 @interface QBImagePickerController (Private)
 
 @property (nonatomic, strong) NSBundle *assetBundle;
@@ -451,6 +453,20 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     return self.fetchResult.count;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     QBAssetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AssetCell" forIndexPath:indexPath];
@@ -495,6 +511,17 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     // Selection state
     if ([self.imagePickerController.selectedAssets containsObject:asset]) {
         [cell setSelected:YES];
+        
+        /* Checkbox related function */
+        
+        
+        labelIndex += 1;
+        [cell ]
+        
+        
+        /* Checkbox realted function */
+        
+        
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
     }
 
