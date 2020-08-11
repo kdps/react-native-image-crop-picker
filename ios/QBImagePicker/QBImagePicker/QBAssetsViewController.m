@@ -521,9 +521,9 @@ static int labelIndex = 0;
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
     }
 
-    //if (cell.isSelected) {
-    //    labelIndex += 1;
-    //}
+    if (cell.isOverlayHidden) {
+        labelIndex += 1;
+    }
     
     labelIndex += 1;
     NSString * labelText = [NSString alloc];

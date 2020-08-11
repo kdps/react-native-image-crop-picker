@@ -42,6 +42,11 @@
     return self;
 }
 
+- (BOOL)isOverlayHidden
+{
+    return self.overlayView.hidden;
+}
+
 - (void)setLabelText:(NSString * )title
 {
     // Set text of checkbox
@@ -52,9 +57,6 @@
 - (void)setSelected:(BOOL) selected
 {
     [super setSelected:selected];
-    
-    //self.label.text = @"TEST";
-    //self.label.hidden = YES;
     
     // Show/hide overlay view
     self.overlayView.hidden = !(selected && self.showsOverlayViewWhenSelected);

@@ -15,6 +15,7 @@
 }
 
 - (void)setLabelText:(NSString * )title;
+- (BOOL)isOverlayHidden;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet QBVideoIndicatorView *videoIndicatorView;
