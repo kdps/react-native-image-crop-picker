@@ -516,8 +516,8 @@ static int labelIndex = 0;
         //labelText = [NSString stringWithFormat:@"%d", labelIndex];
         
         /* Checkbox related function */
-        /*cell.titleLabel.text = @"893";
-        cell.titleLabel.hidden = YES;*/
+        cell.titleLabel.text = @"893";
+        //cell.titleLabel.hidden = YES;
         
         
         UILabel *label = (UILabel *)[cell viewWithTag:1];
