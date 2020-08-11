@@ -511,29 +511,31 @@ static int labelIndex = 0;
     }
     
     NSString * bRet = [[NSString alloc] init];
-    bRet = @"1";
+    
     // Selection state
     if ([self.imagePickerController.selectedAssets containsObject:asset]) {
 
         /* Checkbox related function */
         
         [cell setSelected:YES];
-        bRet = @"2";
         
         /* Checkbox realted function */
         
         
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+        
+        
+        NSString * labelText = [NSString alloc];
+        labelText = [NSString stringWithFormat:@"%d", "Y"];
+        
+        [cell.titleLabel setText:labelText];
+    } else {
+        NSString * labelText = [NSString alloc];
+        labelText = [NSString stringWithFormat:@"%d", "N"];
+        
+        [cell.titleLabel setText:labelText];
     }
     
-    NSLog([NSString stringWithFormat:@"%s", bRet]);
-    
-    labelIndex += 1;
-    
-    NSString * labelText = [NSString alloc];
-    labelText = [NSString stringWithFormat:@"%d", bRet];
-    
-    [cell.titleLabel setText:labelText];
     
     return cell;
 }
