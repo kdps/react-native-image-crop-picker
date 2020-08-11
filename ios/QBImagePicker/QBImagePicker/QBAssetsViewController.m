@@ -600,6 +600,22 @@ static int labelIndex = 0;
     return ![self isMaximumSelectionLimitReached];
 }
 
+- (NSInteger)indexOfAsset:(NSOrderedSet *)param
+{
+    QBImagePickerController *imagePickerController = self.imagePickerController;
+    NSMutableOrderedSet *selectedAssets = imagePickerController.selectedAssets;
+    for (int i = 1; i <= selectedAssets.count; i++)
+    {
+        NSOrderedSet *object = [selectedAssets objectAtIndex:i];
+        if ([object isEqualToOrderedSet:param]) {
+            return i;
+        }
+    }
+    
+    return 1;
+}
+
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     QBImagePickerController *imagePickerController = self.imagePickerController;
@@ -617,18 +633,17 @@ static int labelIndex = 0;
                 [collectionView deselectItemAtIndexPath:self.lastSelectedItemIndexPath animated:NO];
             }
         }
-
+        
+        NSInteger * index = [self indexOfAsset:asset];
         
         QBAssetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AssetCell" forIndexPath:indexPath];
         cell.tag = indexPath.item;
         cell.showsOverlayViewWhenSelected = self.imagePickerController.allowsMultipleSelection;
         NSString * labelText = [NSString alloc];
-        labelText = [NSString stringWithFormat:@"%d", labelIndex];
+        labelText = [NSString stringWithFormat:@"%d", index];
         
         [cell.titleLabel setText:labelText];
 
-        
-        
         
         
         // Add asset to set
