@@ -509,25 +509,21 @@ static int labelIndex = 0;
     } else {
         cell.videoIndicatorView.hidden = YES;
     }
-
+    
+    NSString * bRet = [[NSString alloc] init];
+    bRet = @"1";
     // Selection state
     if ([self.imagePickerController.selectedAssets containsObject:asset]) {
 
         /* Checkbox related function */
         
         [cell setSelected:YES];
+        bRet = @"2";
         
         /* Checkbox realted function */
         
         
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
-    }
-
-    NSString * bRet = [[NSString alloc] init];
-    if (cell.isSelected) {
-        bRet = @"1";
-    } else {
-        bRet = @"2";
     }
     
     NSLog([NSString stringWithFormat:@"%s", bRet]);
