@@ -600,14 +600,14 @@ static int labelIndex = 0;
     return ![self isMaximumSelectionLimitReached];
 }
 
-- (NSInteger)indexOfAsset:(NSOrderedSet *)param
+- (NSInteger)indexOfAsset:(PHAsset *)param
 {
     QBImagePickerController *imagePickerController = self.imagePickerController;
     NSMutableOrderedSet *selectedAssets = imagePickerController.selectedAssets;
     for (int i = 1; i <= selectedAssets.count; i++)
     {
-        NSOrderedSet *object = [selectedAssets objectAtIndex:i];
-        if ([object isEqualToOrderedSet:param]) {
+        PHAsset *object = [selectedAssets objectAtIndex:i];
+        if ([object isEqual:param]) {
             return i;
         }
     }
@@ -634,13 +634,15 @@ static int labelIndex = 0;
             }
         }
         
-        NSInteger * index = [self indexOfAsset:asset];
+        NSInteger  index = [self indexOfAsset:asset];
         
         QBAssetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AssetCell" forIndexPath:indexPath];
         cell.tag = indexPath.item;
         cell.showsOverlayViewWhenSelected = self.imagePickerController.allowsMultipleSelection;
-        NSString * labelText = [NSString alloc];
-        labelText = [NSString stringWithFormat:@"%d", index];
+        //NSString * labelText = [NSString alloc];
+        //labelText = [NSString stringWithFormat:@"%d", index];
+        
+        NSString * labelText = @(index).stringValue;
         
         [cell.titleLabel setText:labelText];
 
