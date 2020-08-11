@@ -13,6 +13,8 @@
 #import "QBImagePickerController.h"
 #import "QBAssetCell.h"
 #import "QBVideoIndicatorView.h"
+#include <time.h>
+#include <stdlib.h>
 
 static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     return CGSizeMake(size.width * scale, size.height * scale);
@@ -521,9 +523,16 @@ static int labelIndex = 0;
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
     }
 
-    if (cell.isOverlayHidden) {
-        labelIndex += 1;
+    NSString * bRet = [[NSString alloc] init];
+    if (cell.isSelected) {
+        bRet = @"1";
+    } else {
+        bRet = @"2";
     }
+    
+    NSLog([NSString stringWithFormat:@"%s", bRet]);
+    
+    labelIndex += 1;
     
     NSString * labelText = [NSString alloc];
     labelText = [NSString stringWithFormat:@"%d", labelIndex];
