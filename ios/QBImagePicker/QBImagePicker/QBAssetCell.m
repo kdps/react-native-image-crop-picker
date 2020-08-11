@@ -29,8 +29,8 @@
 {
     [super setSelected:selected];
     
-     self.label.text = @"TEST";
-    self.label.hidden = YES;
+    self.label.text = @"TEST";
+    //self.label.hidden = YES;
     
     // Show/hide overlay view
     self.overlayView.hidden = !(selected && self.showsOverlayViewWhenSelected);
