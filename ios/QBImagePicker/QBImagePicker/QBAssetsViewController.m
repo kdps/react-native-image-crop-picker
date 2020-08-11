@@ -473,15 +473,15 @@ static int labelIndex = 0;
     cell.tag = indexPath.item;
     cell.showsOverlayViewWhenSelected = self.imagePickerController.allowsMultipleSelection;
 
-    cell.titleLabel.text = @"893";
+    //cell.titleLabel.text = @"893";
     [cell.titleLabel setText:@"123"];
     
-    UILabel *label = (UILabel *)[cell viewWithTag:1];
+    /*UILabel *label = (UILabel *)[cell viewWithTag:1];
     //label = [[UILabel alloc] init];
     CGSize size = [self collectionView:collectionView layout:collectionView.collectionViewLayout sizeForItemAtIndexPath:indexPath];
     label.frame = CGRectMake(0, 0, size.width, size.height);
     NSString *title = [[NSString alloc] initWithFormat:@"%@", @"tete"];
-    label.text = title;
+    label.text = title;*/
     
     //[cell addSubview:label];
     
