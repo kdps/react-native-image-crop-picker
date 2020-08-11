@@ -517,7 +517,7 @@ static int labelIndex = 0;
         
         /* Checkbox related function */
         cell.titleLabel.text = @"893";
-        [cell setLabelText:@"123"];
+        cell.titleLabel.hidden = YES;
         [cell setSelected:YES];
         
         /* Checkbox realted function */
