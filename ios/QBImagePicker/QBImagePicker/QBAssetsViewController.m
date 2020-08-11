@@ -483,7 +483,7 @@ static int labelIndex = 0;
     NSString *title = [[NSString alloc] initWithFormat:@"%@", @"tete"];
     label.text = title;
     
-    [cell addSubview:label];
+    //[cell addSubview:label];
     
     
     // Image
