@@ -472,12 +472,6 @@ static int labelIndex = 0;
     QBAssetCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AssetCell" forIndexPath:indexPath];
     cell.tag = indexPath.item;
     cell.showsOverlayViewWhenSelected = self.imagePickerController.allowsMultipleSelection;
-
-    labelIndex += 1;
-    NSString * labelText = [NSString alloc];
-    labelText = [NSString stringWithFormat:@"%d", labelIndex];
-    
-    [cell.titleLabel setText:labelText];
     
     // Image
     PHAsset *asset = self.fetchResult[indexPath.item];
@@ -526,7 +520,17 @@ static int labelIndex = 0;
         
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
     }
-
+    
+    // When item is selected
+    if ([self.imagePickerController.selectedAssets containsObject:asset]) {
+        labelIndex += 1;
+    }
+    
+    NSString * labelText = [NSString alloc];
+    labelText = [NSString stringWithFormat:@"%d", labelIndex];
+    
+    [cell.titleLabel setText:labelText];
+    
     return cell;
 }
 
