@@ -516,8 +516,24 @@ static int labelIndex = 0;
         //labelText = [NSString stringWithFormat:@"%d", labelIndex];
         
         /* Checkbox related function */
-        cell.titleLabel.text = @"893";
-        cell.titleLabel.hidden = YES;
+        /*cell.titleLabel.text = @"893";
+        cell.titleLabel.hidden = YES;*/
+        
+        
+        UILabel *label = (UILabel *)[cell viewWithTag:1];
+        //label = [[UILabel alloc] init];
+        CGSize size = [self collectionView:collectionView layout:collectionView.collectionViewLayout sizeForItemAtIndexPath:indexPath];
+        label.frame = CGRectMake(0, 0, size.width, size.height);
+        NSString *title = [[NSString alloc] initWithFormat:@"%@", @"tete"];
+        label.text = title;
+        
+        
+        
+        
+        
+        
+        
+        
         [cell setSelected:YES];
         
         /* Checkbox realted function */
