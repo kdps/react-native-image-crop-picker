@@ -514,16 +514,12 @@ static int labelIndex = 0;
         /* Checkbox related function */
         
         [cell setSelected:YES];
+        labelIndex += 1;
         
         /* Checkbox realted function */
         
         
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
-    }
-    
-    // When item is selected
-    if ([self.imagePickerController.selectedAssets containsObject:asset]) {
-        labelIndex += 1;
     }
     
     NSString * labelText = [NSString alloc];
