@@ -525,7 +525,6 @@ static int labelIndex = 0;
         labelIndex += 1;
     }
     
-    labelIndex += 1;
     NSString * labelText = [NSString alloc];
     labelText = [NSString stringWithFormat:@"%d", labelIndex];
     

@@ -44,7 +44,7 @@
 
 - (BOOL)isOverlayHidden
 {
-    return self.overlayView.hidden;
+    return self.selected;
 }
 
 - (void)setLabelText:(NSString * )title
