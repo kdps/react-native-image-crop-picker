@@ -21,15 +21,15 @@
 - (void)setLabelText:(NSString * )title
 {
     // Set text of checkbox
-    [self.label setText:title];
+    //[self.label setText:title];
     self.label.text = @"TEST";
 }
 
-- (void)setSelected:(BOOL)selected
+- (void)setSelected:(BOOL) selected
 {
     [super setSelected:selected];
     
-    self.label.text = @"TEST";
+    //self.label.text = @"TEST";
     //self.label.hidden = YES;
     
     // Show/hide overlay view
