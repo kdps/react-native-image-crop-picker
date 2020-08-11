@@ -526,12 +526,12 @@ static int labelIndex = 0;
         
         
         NSString * labelText = [NSString alloc];
-        labelText = [NSString stringWithFormat:@"%d", "Y"];
+        labelText = [NSString stringWithFormat:@"%s", "Y"];
         
         [cell.titleLabel setText:labelText];
     } else {
         NSString * labelText = [NSString alloc];
-        labelText = [NSString stringWithFormat:@"%d", "N"];
+        labelText = [NSString stringWithFormat:@"%s", "N"];
         
         [cell.titleLabel setText:labelText];
     }
