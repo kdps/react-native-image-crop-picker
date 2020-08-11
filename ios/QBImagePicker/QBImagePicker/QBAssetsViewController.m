@@ -519,6 +519,7 @@ static int labelIndex = 0;
         
         /* Checkbox realted function */
         
+        labelIndex += 1;
         
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
     }
@@ -529,8 +530,7 @@ static int labelIndex = 0;
     labelText = [NSString stringWithFormat:@"%d", labelIndex];
     
     [cell.titleLabel setText:labelText];
-    
-    
+
     return cell;
 }
 
