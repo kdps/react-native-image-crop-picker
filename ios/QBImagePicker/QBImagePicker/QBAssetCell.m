@@ -22,7 +22,7 @@
 {
     // Set text of checkbox
     //[self.label setText:title];
-    self.label.text = @"TEST";
+    self.label.text = @"1";
 }
 
 - (void)setSelected:(BOOL) selected
