@@ -473,18 +473,11 @@ static int labelIndex = 0;
     cell.tag = indexPath.item;
     cell.showsOverlayViewWhenSelected = self.imagePickerController.allowsMultipleSelection;
 
-    //cell.titleLabel.text = @"893";
-    [cell.titleLabel setText:@"123"];
+    labelIndex += 1;
+    NSString * labelText = [NSString alloc];
+    labelText = [NSString stringWithFormat:@"%d", labelIndex];
     
-    /*UILabel *label = (UILabel *)[cell viewWithTag:1];
-    //label = [[UILabel alloc] init];
-    CGSize size = [self collectionView:collectionView layout:collectionView.collectionViewLayout sizeForItemAtIndexPath:indexPath];
-    label.frame = CGRectMake(0, 0, size.width, size.height);
-    NSString *title = [[NSString alloc] initWithFormat:@"%@", @"tete"];
-    label.text = title;*/
-    
-    //[cell addSubview:label];
-    
+    [cell.titleLabel setText:labelText];
     
     // Image
     PHAsset *asset = self.fetchResult[indexPath.item];
@@ -524,13 +517,7 @@ static int labelIndex = 0;
     // Selection state
     if ([self.imagePickerController.selectedAssets containsObject:asset]) {
 
-        //labelIndex += 1;
-        //NSString * labelText = [NSString alloc];
-        //labelText = [NSString stringWithFormat:@"%d", labelIndex];
-        
         /* Checkbox related function */
-        
-        //cell.titleLabel.hidden = YES;
         
         [cell setSelected:YES];
         
