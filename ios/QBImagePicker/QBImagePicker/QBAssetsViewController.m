@@ -519,8 +519,6 @@ static int labelIndex = 0;
         
         /* Checkbox realted function */
         
-        labelIndex += 1;
-        
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
     }
     
