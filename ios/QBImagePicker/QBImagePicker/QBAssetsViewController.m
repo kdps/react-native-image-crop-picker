@@ -505,7 +505,7 @@ static int labelIndex = 0;
             cell.videoIndicatorView.slomoIcon.hidden = YES;
         }
     } else {
-        //cell.videoIndicatorView.hidden = YES;
+        cell.videoIndicatorView.hidden = YES;
     }
 
     // Selection state
@@ -514,12 +514,15 @@ static int labelIndex = 0;
         /* Checkbox related function */
         
         [cell setSelected:YES];
-        labelIndex += 1;
         
         /* Checkbox realted function */
         
         
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+    }
+
+    if (cell.isSelected) {
+        labelIndex += 1;
     }
     
     NSString * labelText = [NSString alloc];
