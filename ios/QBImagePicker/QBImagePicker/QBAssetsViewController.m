@@ -510,8 +510,6 @@ static int labelIndex = 0;
         cell.videoIndicatorView.hidden = YES;
     }
     
-    NSString * bRet = [[NSString alloc] init];
-    
     // Selection state
     if ([self.imagePickerController.selectedAssets containsObject:asset]) {
 
@@ -523,18 +521,14 @@ static int labelIndex = 0;
         
         
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
-        
-        
-        NSString * labelText = [NSString alloc];
-        labelText = [NSString stringWithFormat:@"%s", "Y"];
-        
-        [cell.titleLabel setText:labelText];
-    } else {
-        NSString * labelText = [NSString alloc];
-        labelText = [NSString stringWithFormat:@"%s", "N"];
-        
-        [cell.titleLabel setText:labelText];
     }
+    
+    labelIndex += 1;
+    
+    NSString * labelText = [NSString alloc];
+    labelText = [NSString stringWithFormat:@"%d", labelIndex];
+    
+    [cell.titleLabel setText:labelText];
     
     
     return cell;
