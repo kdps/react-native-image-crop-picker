@@ -505,7 +505,7 @@ static int labelIndex = 0;
             cell.videoIndicatorView.slomoIcon.hidden = YES;
         }
     } else {
-        cell.videoIndicatorView.hidden = YES;
+        //cell.videoIndicatorView.hidden = YES;
     }
 
     // Selection state
