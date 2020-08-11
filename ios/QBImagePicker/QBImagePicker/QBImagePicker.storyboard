@@ -236,8 +236,8 @@
                                 </variation>
                                 <connections>
                                     <outlet property="imageView" destination="0aq-fn-r9R" id="smK-ma-TWL"/>
-                                    <outlet property="label" destination="IiD-gs-nfe" id="T4a-Je-CbW"/>
                                     <outlet property="overlayView" destination="uyS-Tg-Iyl" id="N6m-w2-m4M"/>
+                                    <outlet property="titleLabel" destination="IiD-gs-nfe" id="4qr-y4-h4y"/>
                                     <outlet property="videoIndicatorView" destination="BwJ-KE-LWZ" id="HkB-Dc-nzF"/>
                                 </connections>
                             </collectionViewCell>

@@ -511,13 +511,13 @@ static int labelIndex = 0;
     // Selection state
     if ([self.imagePickerController.selectedAssets containsObject:asset]) {
 
-        labelIndex += 1;
-        NSString * labelText = [NSString alloc];
-        labelText = [NSString stringWithFormat:@"%d", labelIndex];
+        //labelIndex += 1;
+        //NSString * labelText = [NSString alloc];
+        //labelText = [NSString stringWithFormat:@"%d", labelIndex];
         
         /* Checkbox related function */
-        
-        [cell setLabelText:labelText];
+        cell.titleLabel.text = @"893";
+        [cell setLabelText:@"123"];
         [cell setSelected:YES];
         
         /* Checkbox realted function */

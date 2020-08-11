@@ -10,12 +10,16 @@
 
 @class QBVideoIndicatorView;
 
-@interface QBAssetCell : UICollectionViewCell
+@interface QBAssetCell : UICollectionViewCell {
+    UILabel *titleLabel;
+}
 
 - (void)setLabelText:(NSString * )title;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet QBVideoIndicatorView *videoIndicatorView;
+
+@property (nonatomic, retain) IBOutlet UILabel *titleLabel;
 
 @property (nonatomic, assign) BOOL showsOverlayViewWhenSelected;
 
