@@ -516,7 +516,7 @@ static int labelIndex = 0;
         
         labelIndex += 1;
         NSString * labelText = [NSString alloc];
-        labelText = [NSString stringWithFormat:@"%s", labelIndex];
+        labelText = [NSString stringWithFormat:@"%d", labelIndex];
         
         [cell setLabelText:labelText];
         
