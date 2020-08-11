@@ -510,7 +510,7 @@ static int labelIndex = 0;
 
     // Selection state
     if ([self.imagePickerController.selectedAssets containsObject:asset]) {
-        [cell setSelected:YES];
+        //[cell setSelected:YES];
         
         /* Checkbox related function */
         
